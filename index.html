@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="app.min.css">
+    <style>
+      .color-rosa{
+        background: #ff009e;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title color-rosa" >Licor Envia</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="page1">Pedidos</div>
+          <div class="app-button" data-target="page2">Inventario</div>
+          <div class="app-button" data-target="page3">Contacto</div>
+          <div class="app-button" data-target="page2">Facturacion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="page1">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title color-rosa ">Pedidos</div>
+      </div>
+      <div class="app-content">
+          
+      </div>
+    </div>
+       <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title color-rosa">Inventario</div>
+      </div>
+      <div class="app-content">
+        esta pagina es de
+      </div>
+    </div>
+       <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title color-rosa">Contacto</div>
+      </div>
+      <div class="app-content">
+        esta pagina es de
+      </div>
+    </div>
+       <div class="app-page" data-page="page4">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title color-rosa">Facturacion</div>
+      </div>
+      <div class="app-content">
+        esta pagina es de
+      </div>
+    </div>
+
+
+    <script src="js/materialize.js"></script>
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+   
+    <script>
+      App.controller('home', function (page) {
+        // put stuff here
+      });
+
+      App.controller('page2', function (page) {
+        // put stuff here
+      });
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
